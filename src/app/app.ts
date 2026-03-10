@@ -7,7 +7,7 @@ import { BlogPostPreview } from "./blog-post-preview/blog-post-preview";
 
 @Component({
   selector: 'app-root',
-  imports: [LastPosts, BlogView, FormInsertPost, BlogPostPreview],
+  imports: [LastPosts, BlogView],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

@@ -36,11 +36,11 @@
   </div>
 
   @if(errorMessage()){
-    <p>{{ errorMessage() }}</p>
+    <p class="error-message">{{ errorMessage() }}</p>
   }
 
   @if(successMessage()){
-    <p>{{ successMessage() }}</p>
+    <p class="success-message">{{ successMessage() }}</p>
   }
 
   <button type="button" (click)="savePost()">Salva post</button>

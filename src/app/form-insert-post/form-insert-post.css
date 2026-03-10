@@ -39,6 +39,7 @@ textarea {
   border-radius: 6px;
   font-size: 14px;
   transition: border 0.2s ease;
+  box-sizing: border-box;
 }
 
 /* Focus sugli input */
@@ -74,16 +75,15 @@ button:hover {
 }
 
 /* Messaggio errore */
-p {
+.error-message {
   margin-top: 10px;
   font-size: 14px;
-}
-
-p:first-of-type {
   color: #c62828;
 }
 
 /* Messaggio successo */
-p:last-of-type {
+.success-message {
+  margin-top: 10px;
+  font-size: 14px;
   color: #2e7d32;
 }
