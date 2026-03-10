@@ -1,0 +1,47 @@
+<h2>Inserisci nuovo post</h2>
+
+<div>
+  <div>
+    <label for="title">Titolo</label>
+    <input
+      id="title"
+      type="text"
+      [(ngModel)]="post.title"
+      name="title"
+      placeholder="Inserisci il titolo del post"
+    />
+  </div>
+
+  <div>
+    <label for="tags">Tag</label>
+    <input
+      id="tags"
+      type="text"
+      [(ngModel)]="post.tags"
+      name="tags"
+      placeholder="#java, #spring"
+      (blur)="normalizeTags()"
+    />
+  </div>
+
+  <div>
+    <label for="content">Contenuto</label>
+    <textarea
+      id="content"
+      [(ngModel)]="post.content"
+      name="content"
+      rows="10"
+      placeholder="Scrivi il contenuto del post"
+    ></textarea>
+  </div>
+
+  @if(errorMessage()){
+    <p>{{ errorMessage() }}</p>
+  }
+
+  @if(successMessage()){
+    <p>{{ successMessage() }}</p>
+  }
+
+  <button type="button" (click)="savePost()">Salva post</button>
+</div>
